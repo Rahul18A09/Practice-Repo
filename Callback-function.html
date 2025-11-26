@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Callback function</title>
+</head>
+
+<body>
+    <button>Hide</button>
+
+    <div>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque animi repellat tenetur exercitationem ut
+            officiis veniam maiores consequuntur veritatis sapiente excepturi tempore aut quia quae ipsa praesentium,
+            corrupti vitae incidunt dignissimos! Sit doloremque deleniti quam, perferendis voluptas ad nam at molestiae
+            placeat id voluptate vel nihil iste obcaecati illum rem ducimus! Eius doloribus unde dignissimos odit vel
+            temporibus excepturi optio eveniet, asperiores ipsa perspiciatis impedit fugiat architecto in magni culpa
+            quidem cupiditate. Dolorum voluptates, consequuntur non temporibus necessitatibus neque ipsum explicabo ea
+            accusantium. Voluptatum debitis distinctio rem dolores? Saepe distinctio hic doloribus similique tenetur
+            excepturi exercitationem et, laborum accusamus a.</p>
+    </div>
+
+    <script src="./assets/plugin/JQ/jquery-3.7.1.js"></script>
+
+    <script>
+
+        // with callback function
+
+        // $(document).ready(function () {
+        //     $("button").click(function () {
+        //         $("div").hide("slow", function () {
+        //             alert("The paragraph is now hidden");
+        //         });
+        //     });
+        // });
+
+        // without callback function
+
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("div").hide(2000)
+                    alert("The paragraph is now hidden");
+        
+            });
+        });
+
+    </script>
+</body>
+
+</html>
