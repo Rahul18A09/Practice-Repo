@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Animate</title>
+    <style>
+        #container {
+            background-color: blue;
+            color: white;
+            font-size: 20px;
+            width: 200px;
+            height: 200px;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Jquery Animate</h1>
+    <button>click</button>
+    <div id="container">
+        <p>Rahul.</p>
+    </div>
+
+
+
+
+    <script src="./assets/plugin/JQ/jquery-3.7.1.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("#container").animate({ left: "200px", bottom: "100px", opacity: "0.5", height: "+=50px", width: "+=50px" });
+            });
+        });
+    </script>
+</body>
+
+</html>
