@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animate</title>
+    <style>
+        div {
+            background-color: greenyellow;
+            height: 100px;
+            width: 100px;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <button>Start Animation</button>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam explicabo eius qui veniam dolorem modi hic.
+        Atque, odio molestiae. Asperiores, hic quaerat? Voluptatum, nostrum laudantium.</p>
+    <div></div>
+
+
+    <script src="./assets/plugin/JQ/jquery-3.7.1.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                let div = $("div");
+                div.animate({ height: "300px", opacity: "0.4" }, "slow");
+                div.animate({ width: "300px", opacity: "0.8" }, "slow");
+                div.animate({ height: "100px", opacity: "0.4" }, "slow");
+                div.animate({ width: "100px", opacity: "0.8" }, "slow");
+            });
+        });
+    </script>
+</body>
+
+</html>

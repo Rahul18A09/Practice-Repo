@@ -8,7 +8,7 @@
     <style>
         #mydiv{
             background-color: aqua;
-            color: blue;
+            color: white;
             font-size: 20px;
             border: 2px solid yellow;
         }
@@ -42,8 +42,14 @@
         //     });
         // });
 
-        $(document).ready(function () {
-            $("#demo").click(function () {
+        // $(document).ready(function () {
+        //     $("#demo").click(function () {
+        //         $("#mydiv").slideToggle();
+        //     });
+        // });
+
+         $(document).ready(function () {
+            $("#demo").dblclick(function () {
                 $("#mydiv").slideToggle();
             });
         });
