@@ -5,13 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jquery bind</title>
+    <style>
+        div {
+            border: 2px solid white;
+            padding: 20px;
+        }
+    </style>
 </head>
 
 <body>
 
-    Enter your name:- <input type="text">
+    Enter your name:- <input type="text"> <span style="display: none;">Nice to meet you!</span>
 
-    <p>click me!</p>
+    <br>
+    <br>
+
+    <div>
+        First name: <input type="text">
+    </div>
+
+    <!-- <p>click me!</p> -->
+    <p>keypresses: <span>0</span></p>
 
     <script src="./assets/plugin/JQ/jquery-3.7.1.js"></script>
     <script>
@@ -23,9 +37,76 @@
         // });
 
         // 2. blur()
-        $(document).ready(function () {
-            $("input").blur( function () {
-                alert("The input field has lost its focus.");
+        // $(document).ready(function () {
+        //     $("input").blur( function () {
+        //         alert("The input field has lost its focus.");
+        //     });
+        // });
+
+        // #3. change()
+        //  $(document).ready(function () {
+        //     $("input").change( function () {
+        //         alert("The text has been changed.");
+        //     });
+        // });
+
+        // 4. click()
+        // $(document).ready(function () {
+        //     $("p").click( function () {
+        //         alert("The paragraph was clicked.");
+        //     });
+        // });
+
+        // 5. dblclick()
+        // $(document).ready(function () {
+        //     $("p").dblclick( function () {
+        //         alert("The paragraph was dblclicked.");
+        //     });
+        // });
+
+        // 6. focus()
+        // $(document).ready(function () {
+        //     $("input").focus(function () {
+        //         $("span").css("display", "inline").fadeOut(2000);
+        //     });
+        // });
+
+        // 7. focusin & focusout()
+        // $(document).ready(function () {
+        //     $("div").focusin(function(){
+        //         $(this).css("background-color", "yellow");
+        //     });
+
+        //     $("div").focusout(function(){
+        //         $(this).css("background-color", "red");
+        //     });
+        // });
+
+        // 8. hover()
+        // $(document).ready(function () {
+        //     $("p").hover(function () {
+        //         $(this).css("background-color", "yellow");
+        //     }, function () {
+        //         $(this).css("background-color", "pink");
+        //     });
+        // });
+
+        // 9.Keydown()
+        // $(document).ready(function(){
+        //     $("input").keydown(function(){
+        //         $("input").css("background-color", "blue");
+        //     });
+
+        //     $("input").keyup(function(){
+        //         $("input").css("background-color", "yellow");
+        //     });
+        // });
+
+        // 10. keypress()
+        i = 0;
+        $(document).ready(function(){
+            $("input").keypress(function(){
+               $("span").text(i += 1);
             });
         });
     </script>
