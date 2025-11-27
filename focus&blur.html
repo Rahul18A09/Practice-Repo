@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus & Blur</title>
+    <style>
+        input {
+            padding: 10px;
+            border: 2px solid #ccc;
+            outline: none;
+            margin-bottom: 10px;
+        }
+
+        .focus-style {
+            border-color: blue;
+            background-color: yellowgreen;
+        }
+
+        .error {
+            border-color: red;
+        }
+
+        .error-msg {
+            color: red;
+            font-size: 13px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <div>
+            <label for="username">Username</label>
+            <input type="text" id="username"><br>
+            <span id="user-error" class="error-msg"></span>
+        </div>
+
+        <div>
+            <label for="email">Email</label>
+            <input type="email" id="email"><br>
+            <span id="email-error" class="error-msg"></span>
+        </div>
+
+    </form>
+
+
+    <script src="./assets/plugin/JQ/jquery-3.7.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("input").focus(function () {
+                $(this).addClass("focus-style");
+                $(this).removeClass("error");
+                $(this).next(".error-msg").text("");
+            });
+
+
+            $("input").blur(function () {
+                $(this).removeClass("focus-style");
+
+                if ($(this).val() === "") {
+                    $(this).addClass("error");
+                    $(this).next(".error-msg").text("This field is required!");
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
