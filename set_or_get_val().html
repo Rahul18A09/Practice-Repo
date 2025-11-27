@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>set or get val()</title>
+</head>
+
+<body>
+    <p>Name: <input type="text" id="test" value="Mickey Mouse"></p>
+    <button>show value</button>
+
+
+    <script src="./assets/plugin/JQ/jquery-3.7.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                alert("Value:" + $("#test").val());
+            });
+        });
+    </script>
+</body>
+
+</html>
