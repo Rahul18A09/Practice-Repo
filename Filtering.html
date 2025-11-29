@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtering</title>
+
+    <style>
+        div {
+            margin: 15px 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Wlcome to my HomePage</h1>
+    <p style="text-align: center;">This is a paragraph</p>
+    <div style="border: 1px solid black;">
+        <p class="intro">A paragraph in a div. </p>
+        <p>Another paragraph in a div. </p>
+    </div>
+
+    <div style="border: 1px solid black;">
+        <p class="intro">A paragraph in a div. </p>
+        <p>Another paragraph in a div. </p>
+    </div>
+
+    <div style="border: 1px solid black;">
+        <p class="intro">A paragraph in a div. </p>
+        <p>Another paragraph in a div.</p>
+    </div>
+
+
+    <script src="./assets/plugin/JQ/jquery-3.7.1.js"></script>
+    <script>
+        // $(document).ready(function () {
+        //     $("div").first().css({ "color": "blue", "border": " 2px solid blue" });
+        // });
+
+        // $(document).ready(function () {
+        //     $("div").last().css({ "color": "blue", "border": " 2px solid blue" });
+        // });
+
+        // $(document).ready(function () {
+        //     $("p").eq(6).css({ "color": "blue", "border": " 2px solid blue" });
+        // });
+
+        //  $(document).ready(function () {
+        //     $("p").filter(".intro").css({ "color": "blue", "border": " 2px solid blue" });
+        // });
+
+         $(document).ready(function () {
+            $("p").not(".intro").css({ "color": "blue", "border": " 2px solid blue" });
+        });
+    </script>
+</body>
+
+</html>
