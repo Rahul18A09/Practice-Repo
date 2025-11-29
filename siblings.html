@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .siblings *{
+            display: block;
+            border: 2px solid lightgray;
+            color: lightgray;
+            padding: 5px;
+            margin: 15px;
+        }
+    </style>
+</head>
+
+<body class="siblings">
+
+    <div>
+        div (parent)
+        <p>p</p>
+        <span>span</span>
+        <h2>h2</h2>
+        <h3>h3</h3>
+        <h4>h4</h4>
+        <h5>h5</h5>
+        <p>p</p>
+    </div>
+
+     <script src="./assets/plugin/JQ/jquery-3.7.1.js"></script>
+     <script>
+        // $(document).ready(function(){
+        //     $("h2").siblings().css({"color": "red", "border": " 2px solid red"})
+        // })
+
+        //   $(document).ready(function(){
+        //     $("h2").next().css({"color": "red", "border": " 2px solid red"})
+        // })
+
+        // $(document).ready(function(){
+        //     $("span").nextAll().css({"color": "red", "border": " 2px solid red"})
+        // })
+
+        $(document).ready(function(){
+            $("h2").nextUntil("p").css({"color": "red", "border": " 2px solid red"})
+        })
+     </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>parents</title>
+    <style>
+        .ancestors * {
+            display: block;
+            border: 2px solid lightgrey;
+            color: lightgrey;
+            padding: 5px;
+            margin: 15px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <div class="ancestors" style="width:500px;">div (great-grandparent)
+        <ul>ul (grandparent)
+            <li>li (direct parent)
+                <span>span</span>
+            </li>
+        </ul>
+    </div>
+
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+
+    <script src="./assets/plugin/JQ/jquery-3.7.1.js"></script>
+    <script>
+
+        // for parentS
+
+        // $(document).ready(function () {
+        //     $("span").parents("li").css({ "color": "pink", "border": "2px solid pink" });
+        // });
+
+
+        // for parentsUntil
+
+        // $(document).ready(function () {
+        //     $("span").parentsUntil("div").css({ "color": "pink", "border": "2px solid pink" });
+        // });
+
+    </script>
+</body>
+
+</html>
