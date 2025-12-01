@@ -13,9 +13,30 @@
         }
 
         body {
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: Arial, sans-serif;
             margin: 20px;
+        }
 
+        .container {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .item {
+            background: #f1f1f1;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .question {
+            font-weight: bold;
+        }
+
+        .answer {
+            display: none;
+            margin-top: 5px;
         }
     </style>
 </head>
@@ -23,22 +44,39 @@
 <body>
     <div class="container">
 
-        <div class="item">
-            <div class="question">What is HTML?</div>
-            <div class="answer">HTML stands for HyperText Markup Language, used to create web pages.</div>
+        <div class="FAQ">
+            <div class="item">
+                <div class="question">What is HTML?</div>
+                <!-- <span>What is HTML?</span> <span>+</span> -->
+                <div class="answer">HTML stands for HyperText Markup Language, used to create web pages.</div>
+            </div>
+
+            <div class="item">
+                <div class="question">What is CSS?</div>
+                <div class="answer">CSS stands for Cascading Style Sheets, used to style web pages.</div>
+            </div>
+
+            <div class="item">
+                <div class="question">What is JavaScript?</div>
+                <div class="answer">JavaScript is a scripting language used to make web pages interactive.</div>
+            </div>
         </div>
 
-        <div class="item">
-            <div class="question">What is CSS?</div>
-            <div class="answer">CSS stands for Cascading Style Sheets, used to style web pages.</div>
-        </div>
-
-        <div class="item">
-            <div class="question">What is JavaScript?</div>
-            <div class="answer">JavaScript is a scripting language used to make web pages interactive.</div>
-        </div>
 
     </div>
+
+
+    <script src="./assets/plugin/JQ/jquery-3.7.1.js"></script>
+    <script>
+        const faqItems = document.querySelectorAll(".item");
+
+        faqItems.forEach(item => {
+            item.addEventListener("click", () => {
+                const answer = item.querySelector(".answer");
+                answer.style.display = answer.style.display === "block" ? "none" : "block";
+            });
+        });
+    </script>
 </body>
 
 </html>
