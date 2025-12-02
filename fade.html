@@ -10,7 +10,7 @@
 <body>
     <h1>JQuery Fade</h1>
 
-    <div id="firstdiv">
+    <div id="firstdiv" style="display: none;">
         <p>I'm Rahul.</p>
         <p>I'm from Navsari.</p>
     </div>
@@ -26,17 +26,18 @@
         //     });
         //    });
 
-        // $(document).ready(function () {
-        //     $("#demo").click(function () // for this event you have to do style:display-none;
-        //         $("#firstdiv").fadeIn();
-        //     });
-        // });
+    //   $(document).ready(function(){
+    //     $("#demo").click(function(){
+    //         $("#firstdiv").fadeIn();
+    //     })
+    //   })
 
-        // $(document).ready(function () {
-        //     $("#demo").click(function () {
-        //         $("#firstdiv").fadeToggle();
-        //     });
-        // });
+
+        $(document).ready(function () {
+            $("#demo").click(function () {
+                $("#firstdiv").fadeToggle();
+            });
+        });
 
     </script>
 </body>

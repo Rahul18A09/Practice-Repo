@@ -13,7 +13,15 @@
             width: 200px;
             height: 200px;
             position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
+
+        button{
+            margin-bottom: 10px;
+        }
+
     </style>
 </head>
 
@@ -21,7 +29,7 @@
     <h1>Jquery Animate</h1>
     <button>click</button>
     <div id="container">
-        <p style="text-align: center;">Rahul.</p>
+        <p>Rahul</p>
     </div>
 
 
@@ -32,7 +40,7 @@
     <script>
         $(document).ready(function () {
             $("button").click(function () {
-                $("#container").animate({ left: "200px", bottom: "100px", opacity: "0.5", height: "+=50px", width: "+=50px" });
+                $("#container").animate({ left: "200px", bottom: "200px", opacity: "0.5", height: "+=50px", width: "+=50px" });
             });
         });
     </script>
