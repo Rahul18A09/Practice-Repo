@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get attribute</title>
+</head>
+
+<body>
+
+    <p><a href= "https://github.com/Rahul18A09?tab=overview&from=2025-12-01&to=2025-12-02" id="git">github.com</a></p>
+    <button>show href value</button>
+
+    <script src="./assets/plugin/JQ/jquery-3.7.1.js"></script>
+    <script>
+        // get attr
+        // $(document).ready(function () {
+        //     $("button").click(function () {
+        //         alert($("#git").attr("href"));
+        //     });
+        // });
+
+        // set attr
+
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("#git").attr("href","https://www.cricbuzz.com/");
+            });
+        });
+
+    </script>
+</body>
+
+</html>
