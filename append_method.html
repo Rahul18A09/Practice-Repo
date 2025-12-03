@@ -10,7 +10,7 @@
 <body>
     <p>This is a paragraph.</p>
     <p>This is another paragraph.</p>
-<button onclick="appendText()">Append Text</button>
+    <button onclick="appendText()">Append Text</button>
 
     <ol>
         <li>List item 1</li>
@@ -36,9 +36,15 @@
 
         function appendText() {
             let txt1 = "<P>Text.</p>";
-            let txt2 =  $("<p></p>").text("Text.");
-               
-          }
+            let txt2 = $("<p></p>").text("Text.");
+            let txt3 = document.createElement("p");
+            txt3.innerHTML = "Text.";
+
+            $("body").append(txt1, txt2, txt3);
+
+
+
+        }
     </script>
 </body>
 
