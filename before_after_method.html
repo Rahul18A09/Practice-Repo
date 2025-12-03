@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before and after</title>
+</head>
+
+<body>
+    <div>
+        <h1>Rahul.</h1>
+    </div>
+
+    <button id="btn1">Insert before</button>
+    <button id="btn2">Insert after</button>
+
+
+    <script src="./assets/plugin/JQ/jquery-3.7.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            
+            $("#btn1").click(function () {
+                $("h1").before("<b>Bharada</b>");
+            });
+
+            $("#btn2").click(function () {
+                $("h1").after("<i>Kalubhai</i>");
+            });
+        });
+    </script>
+</body>
+
+</html>
