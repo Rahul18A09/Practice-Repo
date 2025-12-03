@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery CSS</title>
+</head>
+
+<body>
+    <h2>This ia a Heading</h2>
+
+    <p class="para1" style="background-color: red;">This is a paragraph.</p>
+    <p class="para2" style="background-color: green;">This is a paragraph.</p>
+    <p class="para3" style="background-color: blue;">This is a paragraph.</p>
+
+    <button>Return background-color of p</button>
+
+    <script src="./assets/plugin/JQ/jquery-3.7.1.js"></script>
+    <script>
+
+        // Return a css property
+        // $(document).ready(function () {
+        //     $("button").click(function () {
+        //         alert("Backgroung-color = " + $(".para3").css("background-color"));
+        //     });
+        // });
+
+        // set a css property
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("p").css("background-color", "yellow");
+                $("p").css("font-size", "30px");
+                $("p").css("border", "2px solid blue");
+            });
+        });
+    </script>
+</body>
+
+</html>

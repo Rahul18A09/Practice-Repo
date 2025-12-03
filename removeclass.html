@@ -7,42 +7,44 @@
     <title>Document</title>
     <style>
         .important {
-            font-size: xx-large;
-            font-family: Arial, Helvetica, sans-serif;
+            font-size: 50px;
             font-weight: bold;
+            color:#00ffb8;
         }
 
-        .blue {
-            color: blue;
+        .mydiv {
+            background-color: yellow;
+            color: red;
         }
 
         .para {
+            font-size: xx-large;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: purple;
             background-color: aqua;
-            color: black;
         }
     </style>
 
 </head>
 
 <body>
-    <h1 class="blue">Heading 1</h1>
-    <h2 class="blue">Heading 2</h2>
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
 
-    <p class="para">This is a paragraph.</p>
-    <p class="para">This is another paragraph.</p>
+    <p>This is a paragraph.</p>
+    <p>This is another paragraph.</p>
 
-    <div class="important">This is some importan text!</div>
+    <div>This is some importan text!</div>
 
     <button>Add class to element</button>
 
 
     <script src="./assets/plugin/JQ/jquery-3.7.1.js"></script>
     <script>
-        $(document).ready(function(){
-            $("button").click(function(){
-                $("h1,h2").removeClass("blue");
-                $("p").removeClass("para");
-                $("div").removeClass("important");
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("h1,h2").toggleClass("important");
+                $("div").toggleClass("para");
             });
         });
     </script>
